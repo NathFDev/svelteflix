@@ -47,6 +47,7 @@
 <style>
 	.grid {
 		display: grid;
+		max-width: 80rem;
 		margin: 2em 0;
 		gap: 2em;
 	}
@@ -71,15 +72,5 @@
 
 	dd {
 		margin: 0;
-	}
-
-	@media (min-width: 40em) {
-		.grid {
-			grid-template-columns: 1fr 1fr;
-		}
-
-		dl {
-			height: 0;
-		}
 	}
 </style>

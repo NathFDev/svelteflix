@@ -32,9 +32,9 @@
 	function handleScroll() {
 		const remaining = viewport.scrollHeight - (viewport.scrollTop + viewport.clientHeight);
 
-        if (remaining < 400) {
-            dispatch("end")
-        }
+		if (remaining < 400) {
+			dispatch("end");
+		}
 
 		a = Math.floor(viewport.scrollTop / itemHeight) * numColumns;
 		b = Math.ceil((viewport.scrollTop + viewport.clientHeight) / itemHeight) * numColumns;
@@ -70,6 +70,9 @@
 <style>
 	.viewport {
 		overflow-y: auto;
+		&::-webkit-scrollbar {
+			display: none;
+		}
 	}
 
 	.results {

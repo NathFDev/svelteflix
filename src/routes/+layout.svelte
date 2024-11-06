@@ -6,15 +6,15 @@
 </script>
 
 <nav>
-	<a href="/">
-		<img src={logo} alt="Svelteflix logo" />
-	</a>
+	<a class="logo" href="/"><img class="logo" alt="SvelteFlix" src={logo} /></a>
 
 	<div class="links">
+<div class="links">
 		<a href="/search">Search</a>
 		<a href="/watchlist">Watchlist</a>
 		<a href="/login">Sign in</a>
 	</div>
+    </div>
 </nav>
 
 <main class:infinite={$page.data.infinite}>
@@ -30,14 +30,14 @@
 </footer>
 
 <style>
-	nav {
+  nav {
 		display: flex;
 		width: 100%;
 		height: 3rem;
 		align-items: center;
 		justify-content: space-between;
-		max-width: var(--column);
-		padding: 0 var(--side);
+		max-width: 80rem;
+		padding: 1rem;
 		color: var(--accent);
 		align-self: center;
 	}
@@ -62,9 +62,9 @@
 		overflow: hidden;
 	}
 
-    footer {
+  footer {
         display: flex;
         justify-content: center;
         height: 3rem;
-    }
+  }
 </style>

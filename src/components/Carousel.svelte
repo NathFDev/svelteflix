@@ -25,24 +25,41 @@
 
 <style>
 	.carousel {
+		--padding: max(var(--side), calc(var(--side) + (100vw - var(--column)) / 2));
 		display: flex;
-		height: 10rem;
-		gap: 1rem;
-		overflow-x: scroll;
+		height: clamp(10rem, 25vw, 20rem);
+		overflow-x: auto;
 		overflow-y: hidden;
-		scroll-snap-type: both mandatory;
-		scroll-padding-left: max(var(--side), calc(var(--side) + (100vw - var(--column)) / 2));
-		padding: 0 max(var(--side), calc(var(--side) + (100vw - var(--column)) / 2));
-		&::-webkit-scrollbar {
-			display: none;
-		}
+		white-space: nowrap;
+		overscroll-behavior-x: contain;
+		scroll-snap-type: x mandatory;
+		scroll-padding-left: var(--padding);
+		padding: 0 var(--padding);
+		gap: 1rem;
+	}
+
+	.carousel::-webkit-scrollbar {
+		display: none;
+	}
+
+	h2 {
+		font-size: 2.4rem;
+		padding: 0 var(--side);
+		margin-top: 4rem;
+	}
+
+	h2 a {
+		color: var(--accent);
 	}
 
 	a {
+		font-size: 2.4rem;
+		scroll-snap-align: start;
 		height: 100%;
+		aspect-ratio: 2 / 3;
 	}
 
 	img {
-		height: 100%;
+		width: 100%;
 	}
 </style>

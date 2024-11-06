@@ -40,7 +40,7 @@
 	}
 
 	.info {
-		padding: 0 var(--side);
+		padding: 0 1rem;
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
